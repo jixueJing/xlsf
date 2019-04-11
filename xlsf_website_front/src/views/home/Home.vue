@@ -1,7 +1,11 @@
 <template>
   <div id="home">
-    <top_website></top_website>
-    <footer_website></footer_website>
+    <div class="top_website">
+      <top_website></top_website>
+    </div>
+    <div class="footer_website">
+      <footer_website></footer_website>
+    </div>
   </div>
 </template>
 
@@ -24,5 +28,13 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+  .top_website{
+    height: 90px;
+  }
+  .footer_website{
+    text-align: center;
+    height: 150px;
+    float: bottom;
   }
 </style>
