@@ -1,6 +1,7 @@
+<!-- 页脚  -->
 <template>
   <div id="footer" class="layout-footer-center">
-
+      哈哈哈哈哈
   </div>
 </template>
 
