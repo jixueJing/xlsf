@@ -20,6 +20,21 @@
 
 <script>
   export default {
+    name:"LoopCarousel",
+    created(){
+      this.loading();
+    },
+    methods(){
+      loading:function f() {
+        this.$axios.get("")
+          .then(function (response) {
+
+        })
+          .catch(function (error) {
+
+        })
+      }
+    },
     data () {
       return {
         value2: 0
