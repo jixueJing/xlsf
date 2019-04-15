@@ -10,12 +10,37 @@ group = 'com.xlsf.website'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
+//repositories {
+//    mavenCentral()
+//}
+// 使用了 Maven 的中央仓库（你也可以指定其他仓库）
 repositories {
-    mavenCentral()
+    //mavenCentral()
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // 添加  Spring Security 依赖
+    compile('org.springframework.boot:spring-boot-starter-security')
+
+    // 添加 Spring Boot 开发工具依赖
+    compile("org.springframework.boot:spring-boot-devtools")
+
+    //添加本地ojdd6.jar
+    compile files("lib/ojdbc6.jar")
+    // 添加 Spring Data JPA 的依赖
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    // 添加   Thymeleaf Spring Security 依赖，与 Thymeleaf 版本一致都是 3.x
+    compile("org.thymeleaf.extras:thymeleaf-extras-springsecurity4:3.0.2.RELEASE")
+
+    // 添加  Apache Commons Lang 依赖
+    compile("org.apache.commons:commons-lang3:3.5")
+
 }

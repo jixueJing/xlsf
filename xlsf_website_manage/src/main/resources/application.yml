@@ -1,1 +1,39 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    username: XLSF
+    password: XLSF
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    database: oracle
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+  servlet:
+    multipart:
+      max-file-size: 30M
+      max-request-size: 100M
+cmodes:
+  redis:
+    open: false  # 是否开启redis缓存  true开启   false关闭
+  shiro:
+    redis: fslse # true表示shiro session存到redis里，需要开启redis，才会生效【分布式场景】
+  reids:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    timeout: 1000
+    jedis:
+      pool:
+        max-active: 6000
+        max-wait: 1000
+        max-idle: 400
+
+
 
