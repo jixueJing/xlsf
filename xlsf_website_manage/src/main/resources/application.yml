@@ -16,8 +16,8 @@ spring:
         dialect: org.hibernate.dialect.OracleDialect
   servlet:
     multipart:
-      max-file-size: 30M
-      max-request-size: 100M
+      max-file-size: 30MB
+      max-request-size: 100MB
 cmodes:
   redis:
     open: false  # 是否开启redis缓存  true开启   false关闭
