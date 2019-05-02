@@ -7,7 +7,7 @@ import Axios from 'axios'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 
-Vue.prototype.$axios = axios
+// Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 Vue.use(iView)
 
